@@ -3,6 +3,10 @@ package com.dnd.log.player;
 public class Player {
 	private String name;
 	
+	public Player() {
+		name = "unknown";
+	}
+	
 	public Player(String name) {
 		this.name = name;
 	}
