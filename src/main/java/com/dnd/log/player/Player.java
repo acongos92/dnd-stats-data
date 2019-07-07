@@ -1,10 +1,12 @@
 package com.dnd.log.player;
 
+import com.dnd.log.constants.StringConstants;
+
 public class Player {
 	private String name;
 	
 	public Player() {
-		name = "unknown";
+		name =  StringConstants.DEFAULT_STRING_VALUE;
 	}
 	
 	public Player(String name) {
