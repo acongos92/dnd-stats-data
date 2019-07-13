@@ -1,38 +1,49 @@
 package com.dnd.log.character;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
 import com.dnd.log.constants.StringConstants;
 
+@Entity
 public class Character {
-	private String player_name;
-	private String class_name;
+	
+	private String playerName;
+	private String className;
+	
+	@Id
 	private String name;
 	
 	public Character() {
-		player_name = StringConstants.DEFAULT_STRING_VALUE;
-		class_name =  StringConstants.DEFAULT_STRING_VALUE;
+		playerName = StringConstants.DEFAULT_STRING_VALUE;
+		className =  StringConstants.DEFAULT_STRING_VALUE;
 		name =  StringConstants.DEFAULT_STRING_VALUE;
 	}
 	
-	public Character(String player_name, String class_name, String name) {
-		this.class_name = class_name;
-		this.player_name = player_name;
-		this.class_name = name;
+	public Character(String playerName, String className, String name) {
+		this.className = className;
+		this.playerName = playerName;
+		this.name = name;
 	}
 
-	public String getPlayer_name() {
-		return player_name;
+	public String getplayerName() {
+		return playerName;
 	}
 
-	public void setPlayer_name(String player_name) {
-		this.player_name = player_name;
+	public void setplayerName(String playerName) {
+		this.playerName = playerName;
 	}
 
-	public String getClass_name() {
-		return class_name;
+	public String getclassName() {
+		return className;
 	}
 
-	public void setClass_name(String class_name) {
-		this.class_name = class_name;
+	public void setclassName(String className) {
+		this.className = className;
 	}
 
 	public String getName() {
@@ -43,6 +54,10 @@ public class Character {
 		this.name = name;
 	}
 	
+	@Override
+	public String toString() {
+		return "CHARACTER: " + name + " CLASS: " + className + " PLAYED BY: " + playerName;
+	}
 	
 	
 	
