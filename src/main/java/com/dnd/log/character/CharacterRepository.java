@@ -7,4 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface CharacterRepository extends CrudRepository<Character, String> {
 
 	List<Character> findByPlayerName(String playerName);
+	
+	List<Character> findAll();
 }

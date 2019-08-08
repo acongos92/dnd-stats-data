@@ -8,16 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class DndLogApplication {
 	
 	public static final Logger logger = LoggerFactory.getLogger(DndLogApplication.class);
 	
-
-	
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(DndLogApplication.class);
-		app.run(args);
+		SpringApplication.run(DndLogApplication.class, args);
 	}
 	
 
